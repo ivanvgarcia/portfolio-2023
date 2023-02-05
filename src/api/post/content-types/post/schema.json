@@ -1,10 +1,11 @@
 {
   "kind": "collectionType",
-  "collectionName": "portfolios",
+  "collectionName": "posts",
   "info": {
-    "singularName": "portfolio",
-    "pluralName": "portfolios",
-    "displayName": "Portfolio"
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "Post",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,8 +23,31 @@
         }
       },
       "type": "string",
-      "unique": false,
       "required": true
+    },
+    "excerpt": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "body": {
       "pluginOptions": {
@@ -31,22 +55,7 @@
           "localized": true
         }
       },
-      "type": "richtext"
-    },
-    "cover": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
+      "type": "richtext",
       "required": true
     },
     "slug": {
@@ -58,6 +67,12 @@
       "type": "uid",
       "targetField": "title",
       "required": true
+    },
+    "content_types": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::content-type.content-type",
+      "mappedBy": "posts"
     }
   }
 }
