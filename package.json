@@ -11,11 +11,14 @@
   },
   "devDependencies": {},
   "dependencies": {
+    "@_sh/strapi-plugin-ckeditor": "@types/node2.0.3",
     "@strapi/plugin-i18n": "4.6.0",
     "@strapi/plugin-users-permissions": "4.6.0",
     "@strapi/strapi": "4.6.0",
     "pg": "@types/node8.9.0",
-    "pg-connection-string": "@types/node2.5.0"
+    "pg-connection-string": "@types/node2.5.0",
+    "strapi-plugin-duplicate-button": "@types/node1.1.7",
+    "strapi-plugin-populate-deep": "@types/node2.0.0"
   },
   "author": {
     "name": "A Strapi developer"

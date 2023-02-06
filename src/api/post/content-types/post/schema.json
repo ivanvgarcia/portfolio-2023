@@ -73,6 +73,21 @@
       "relation": "manyToMany",
       "target": "api::content-type.content-type",
       "mappedBy": "posts"
+    },
+    "technologies": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
