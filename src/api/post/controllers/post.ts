@@ -9,7 +9,7 @@ module.exports = createCoreController("api::post.post", ({ strapi }) => ({
 
     const entity = await strapi.db.query("api::post.post").findOne({
       where: { slug },
-      populate: ["cover", "technologies"],
+      populate: ["cover", "technologies", "links"],
     });
 
     const sanitizedEntity = await this.sanitizeOutput(entity, ctx);
